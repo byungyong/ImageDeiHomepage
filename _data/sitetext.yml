@@ -17,7 +17,7 @@ en: &DEFAULT_EN
     buttonlink: "#services"
 
   introduction:
-    title: "회사소개"
+    title: "introduction"
     text: "Lorem ipsum"
     section: introduction
     list:
