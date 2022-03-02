@@ -11,16 +11,20 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "회사소개"
-      section: introduce
-    - title: "솔루션"
+    - title: "Services"
       section: services
-    - title: "서비스"
-      section: services
-    - title: "시스템"
+    - title: "Portfolio"
       section: portfolio
+    - title: "About"
+      section: about
+    - title: "Timeline"
+      section: timeline
+    - title: "Team"
+      section: team
     - title: "Contact"
       section: contact
+    - title: "Theme Source"
+      url: https://github.com/raviriley/agency-jekyll-theme/
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -29,7 +33,26 @@ en-GB:
   <<: *DEFAULT_EN
 en-AU:
   <<: *DEFAULT_EN
+
+# Spanish
+# -------
+es: &DEFAULT_ES
+  nav:
+    - title: "Servicios"
+      section: servicios
+    - title: "Portafolio"
+      section: portafolio
+    - title: "Sobre Nosotros"
+      section: nosotros
+    - title: "Cronología"
+      section: cronologia
+    - title: "Equipo"
+      section: equipo
+    - title: "Contáctenos"
+      section: contacto
+    - title: "Fuente de la plantilla"
+      url: https://github.com/raviriley/agency-jekyll-theme/
 es-ES:
-  <<: *DEFAULT_EN
+  <<: *DEFAULT_ES
 es-CO:
-  <<: *DEFAULT_EN
+  <<: *DEFAULT_ES
