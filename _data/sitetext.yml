@@ -9,15 +9,15 @@
 
 # English (default)
 # -----------------
-ko: &DEFAULT_KO
+en: &DEFAULT_EN
   header:
     title: Welcome to our Studio!
     text: It's Nice To Meet You
     button: Tell Me More
     buttonlink: "#services"
 
-  회사소개:
-    title: "Services"
+  introduction:
+    title: "회사소개"
     text: "Lorem ipsum"
     section: services
     list:
