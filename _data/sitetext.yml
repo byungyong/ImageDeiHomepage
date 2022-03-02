@@ -30,6 +30,7 @@ ko: &DEFAULT_KO
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
         desc: "Your description here, full **Markdown** support"
         icon: fab fa-markdown
+
   services:
     title: "Services"
     text: "Lorem ipsum"
