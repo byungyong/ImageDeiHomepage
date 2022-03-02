@@ -13,8 +13,8 @@
 
 theme: jekyll-theme-cayman
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+url    : "https://byungyong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ImageDeiHomepage" # the subpath of your site, e.g. /blog
 
 title      : ImageDei에 오신걸 환영합니다.  
 email      : read100nm@khu.ac.kr #this is also the email contact forms will go to
