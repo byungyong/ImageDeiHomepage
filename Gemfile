@@ -1,5 +1,6 @@
 #after any changes to the Gemfile, execute bundle update!
 source "https://rubygems.org"
+gem "jekyll-agency"
 gemspec
 
 # Delete the following lines if not on Windows: 
@@ -7,4 +8,3 @@ gemspec
 gem "wdm", ">= 0.1.0" if Gem.win_platform?
 
 gem "webrick", "~> 1.7"
-gem "jekyll-agency"
