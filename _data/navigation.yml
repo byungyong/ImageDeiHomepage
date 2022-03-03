@@ -12,13 +12,13 @@
 en: &DEFAULT_EN
   nav:
     - title: "회사소개"
-      section: services
-    - title: "솔루션"
-      section: portfolio
-    - title: "서비스"
       section: about
+    - title: "솔루션"
+      section: solutions
+    - title: "서비스"
+      section: services
     - title: "시스템"
-      section: timeline
+      section: portfolio
     - title: "Contact"
       section: contact
 en-US:
