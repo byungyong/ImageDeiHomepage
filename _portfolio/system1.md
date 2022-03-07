@@ -1,12 +1,12 @@
 ---
 caption: #what displays in the portfolio grid:
-  title: Example
-  subtitle: subtitle
+  title: 나노버블 제너레이터 500ml
+  subtitle: 소형 나노 버블 생성기
   thumbnail: https://place-hold.it/400x300
   
 #what displays when the item is clicked:
-title: Title
-subtitle: subtitle lorem ipsum dolor sit amet consectetur.
+title: 나노버블 제너레이터 500ml
+subtitle: 소형 나노 버블 생성기
 image: https://place-hold.it/400x300 #main image, can be a link or a file in assets/img/portfolio
 alt: image alt text
 
