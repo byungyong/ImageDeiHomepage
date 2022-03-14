@@ -127,11 +127,11 @@ en: &DEFAULT_EN
     section: team
     people:
       - name: "이찬우"
-        role: "대표이사"
+        role: "대표이사(영상처리박사)"
         image: assets/img/team/avatar1.jpg
         social:
       - name: "류병용"
-        role: "책임 연구원/개발팀장"
+        role: "책임 연구원/개발팀장(영상처리박사)"
         image: assets/img/team/avatar2.jpg
         social:
 
