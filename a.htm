@@ -19,55 +19,45 @@ body {
   function loadMap(lat,lng,mylat,mylng)
   {
     kakao.maps.load(function() {
-    var mapContainer = document.getElementById('mymap');
-    var mapOption = { 
-      center: new kakao.maps.LatLng(lat, lng), 
-      level: 3
-    };
-    var map = new kakao.maps.Map(mapContainer, mapOption);
+      var mapContainer = document.getElementById('mymap');
+      var mapOption = { 
+        center: new kakao.maps.LatLng(lat, lng), 
+        level: 3
+      };
+      var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    var officePosition  = new kakao.maps.LatLng(lat,lng); 
-    var myPosition      = new kakao.maps.LatLng(mylat,mylng); 
+      var officePosition  = new kakao.maps.LatLng(lat,lng); 
+      var myPosition      = new kakao.maps.LatLng(mylat,mylng); 
 
-    var marker1 = new kakao.maps.Marker({
-      position: officePosition,
-    });
+      var marker1 = new kakao.maps.Marker({
+        position: officePosition,
+      });
 
-    var marker2 = new kakao.maps.Marker({
-      position: myPosition,
-    });
+      var marker2 = new kakao.maps.Marker({
+        position: myPosition,
+      });
 
-    marker1.setMap(map);
-    marker2.setMap(map);
+      marker1.setMap(map);
+      marker2.setMap(map);
 
-    var iwContent = '<div style="padding:5px;">투표소</div>';
-    var iwPosition = new kakao.maps.LatLng(lat,lng);
-    var infowindow = new kakao.maps.InfoWindow({
-        position : iwPosition, 
-        content : iwContent 
-    });
-  
-    var iwContent2 = '<div style="padding:5px;">내 위치</div>';
-    var iwPosition2 = new kakao.maps.LatLng(mylat,mylng);
-    var infowindow2 = new kakao.maps.InfoWindow({
-        position : iwPosition2, 
-        content : iwContent2 
-    });
-  
-    infowindow2.open(map, marker2); 
-    infowindow.open(map, marker1); 
-    map.panTo(officePosition);  
+      var iwContent = '<div style="padding:5px;">투표소</div>';
+      var iwPosition = new kakao.maps.LatLng(lat,lng);
+      var infowindow = new kakao.maps.InfoWindow({
+          position : iwPosition, 
+          content : iwContent 
+      });
+    
+      var iwContent2 = '<div style="padding:5px;">내 위치</div>';
+      var iwPosition2 = new kakao.maps.LatLng(mylat,mylng);
+      var infowindow2 = new kakao.maps.InfoWindow({
+          position : iwPosition2, 
+          content : iwContent2 
+      });
+    
+      infowindow2.open(map, marker2); 
+      infowindow.open(map, marker1); 
+      map.panTo(officePosition);  
 
-    var geocoder = new kakao.maps.services.Geocoder();
-    geocoder.coord2RegionCode(lng, lat, 
-      function(result, status) {
-        if (status === kakao.maps.services.Status.OK) {
-            var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
-            detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
-            
-            console.log(detailAddr);
-        }   
-      }); 
     });
     console.log("loadMap finish!!!");
   }
