@@ -16,7 +16,7 @@ body {
 
 
 <script type="text/javascript">
-  function loadMap(lat,lng)
+  function loadMap(lat,lng,mylat,mylng)
   {
     kakao.maps.load(function() {
     var mapContainer = document.getElementById('mymap');
@@ -25,9 +25,42 @@ body {
       level: 3
     };
     var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var officePosition  = new kakao.maps.LatLng(lat,lng); 
+    var myPosition      = new kakao.maps.LatLng(mylat,mylng); 
+
+    var marker1 = new kakao.maps.Marker({
+      position: officePosition,
+      zIndex: 0
+    });
+
+    var marker2 = new kakao.maps.Marker({
+      position: myPosition,
+      zIndex: 1
+    });
+
+    marker1.setMap(map);
+    marker2.setMap(map);
+
+    var iwContent = '<div style="padding:5px;">투표소</div>';
+    var infowindow = new kakao.maps.InfoWindow({
+        position : officePosition, 
+        content : iwContent 
+    });
+  
+    var iwContent2 = '<div style="padding:5px;">내 위치</div>';
+    var infowindow2 = new kakao.maps.InfoWindow({
+        position : myPosition, 
+        content : iwContent2 
+    });
+  
+    infowindow2.open(map, marker2); 
+    infowindow.open(map, marker1); 
+  
     });
     console.log("loadMap finish!!!");
   }
+
 </script>
 </body>
 </html>
