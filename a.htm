@@ -31,32 +31,33 @@ body {
 
     var marker1 = new kakao.maps.Marker({
       position: officePosition,
-      zIndex: 0
     });
 
     var marker2 = new kakao.maps.Marker({
       position: myPosition,
-      zIndex: 1
     });
 
     marker1.setMap(map);
     marker2.setMap(map);
 
     var iwContent = '<div style="padding:5px;">투표소</div>';
+    var iwPosition = new kakao.maps.LatLng(lat,lng);
     var infowindow = new kakao.maps.InfoWindow({
-        position : officePosition, 
+        position : iwPosition, 
         content : iwContent 
     });
   
     var iwContent2 = '<div style="padding:5px;">내 위치</div>';
+    var iwPosition2 = new kakao.maps.LatLng(mylat,mylng);
     var infowindow2 = new kakao.maps.InfoWindow({
-        position : myPosition, 
+        position : iwPosition2, 
         content : iwContent2 
     });
   
     infowindow2.open(map, marker2); 
     infowindow.open(map, marker1); 
-  
+    map.panTo(officePosition);  
+
     });
     console.log("loadMap finish!!!");
   }
