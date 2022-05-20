@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mp</title>
+<style>
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+</style>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=010f1bce89c43abff300be9ffaa5441a"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height:100vh;"></div>
+
+
+<script defer>
+var mapContainer = document.getElementById('map'), 
+mapOption = { 
+  center: new kakao.maps.LatLng(33.450701, 126.570667), 
+  level: 3
+};
+var map = new kakao.maps.Map(mapContainer, mapOption);
+</script>
+</body>
+</html>
