@@ -59,11 +59,11 @@ body {
     map.panTo(officePosition);  
 
     var geocoder = new kakao.maps.services.Geocoder();
-    geocoder.coord2RegionCode(officePosition.getLng(), officePosition.getLat(), 
+    geocoder.coord2RegionCode(lng, lat, 
       function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
             var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
-            //detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
+            detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
             
             console.log(detailAddr);
         }   
